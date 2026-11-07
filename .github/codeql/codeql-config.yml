@@ -1,0 +1,14 @@
+name: "CodeQL config"
+
+queries:
+  - uses: security-and-quality
+
+paths-ignore:
+  - target
+  - node_modules
+  - build
+  - dist
+  - .gradle
+  - .venv
+  - .worktrees
+  - recording

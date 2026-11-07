@@ -1,4 +1,5 @@
 <!-- markdownlint-disable-file MD041 -->
+<!-- Conventional Commit subject: <type>(<scope>): <description> -->
 <!-- The metadata line must stay first: PR hygiene depends on it, and a template
      body is not a document with an H1. -->
 Priority: ... | Area: ... | Labels: ... | Milestone: ... | Task: CTX-XXXX
@@ -11,9 +12,12 @@ Priority: ... | Area: ... | Labels: ... | Milestone: ... | Task: CTX-XXXX
 
 <!-- Requirement ID, ADR/OQ, or the defect this fixes. -->
 
-## Verification
+## Verification & Testing
 
 <!-- Commands run and their real output. "just check" is the minimum. -->
+- [ ] `just check` passes cleanly
+- [ ] Relevant unit / property tests added or updated
+- [ ] Worktree verified and isolated (`.worktrees/ctx-XXXX-...`)
 
 ## Boundary check
 
