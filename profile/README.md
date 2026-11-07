@@ -16,7 +16,7 @@
 - **只帮记忆，不替推理。** 不主动给嫌疑人排序，不替读者解谜。
 - **可导出，可撤回。** 你的笔记和标注属于你。
 
-## 仓库
+## 开源仓库
 
 | 仓库 | 内容 | 许可 |
 |---|---|---|
@@ -25,21 +25,20 @@
 | [mixu-spoiler](https://github.com/mixu-app/mixu-spoiler) | 知识边界过滤（防剧透） | Apache-2.0 |
 | [mixu-renderer](https://github.com/mixu-app/mixu-renderer) | Compose Canvas 图谱渲染 | Apache-2.0 |
 | [mixu-contracts](https://github.com/mixu-app/mixu-contracts) | 叙事图格式、HTTP 契约、错误码 | Apache-2.0 |
-| `mixu-docs` | 产品、架构、安全、决策文档（**私有**，暂不公开） | 内部 |
 | [mixu-website](https://github.com/mixu-app/mixu-website) | 落地页（bun-only 静态站 + 中文文案） | Apache-2.0 |
 | [mixu-fixtures](https://github.com/mixu-app/mixu-fixtures) | 版权干净的剧透回归语料 | CC0-1.0 |
-| mixu-server / mixu-ai-worker / mixu-infrastructure | 托管服务、抽取管线、基础设施 | 专有（闭源） |
 
-客户端与核心库开源，是为了让"不做剧透"这件事可以被外部检查；托管服务、模型管线与
-图库保留商业边界。客户端用 MPL-2.0（改了的文件要公开，仍可商业分发），核心库用
-Apache-2.0（别的项目可以直接复用，不必继承客户端的约束）。开源的是代码，不是云服务、
-品牌或第三方图书内容。
+客户端与核心库开源，是为了让"不做剧透"这件事可以被外部检查。客户端用 MPL-2.0（改了的
+文件要公开，仍可商业分发），核心库用 Apache-2.0（别的项目可以直接复用，不必继承客户端的
+约束）。开源的是代码，不是云服务、品牌或第三方图书内容。
 
 ## 从这里开始
 
-- 想了解产品：读 `mixu-docs`（内部私有仓库）。
 - 想参与客户端：读 [mixu-client](https://github.com/mixu-app/mixu-client) 的 `AGENTS.md` 与
   [贡献指南](https://github.com/mixu-app/mixu-client/blob/main/CONTRIBUTING.md)。
+- 想复用图模型或防剧透过滤：从 [mixu-graph](https://github.com/mixu-app/mixu-graph) 与
+  [mixu-spoiler](https://github.com/mixu-app/mixu-spoiler) 的 `docs/design.md` 开始。
+- 想验证数据格式：看 [mixu-contracts](https://github.com/mixu-app/mixu-contracts)。
 - 关心剧透问题怎么测：看 [mixu-fixtures](https://github.com/mixu-app/mixu-fixtures)。
 
 ## 联系方式
@@ -50,6 +49,6 @@ Apache-2.0（别的项目可以直接复用，不必继承客户端的约束）�
 
 ## 许可
 
-各仓库许可见上表，选型理由见 `mixu-docs`（内部私有仓库）。
+各仓库许可见上表；开源范围与许可选型的决定记录在维护者内部文档中。
 「Mixu」「谜序」名称与 Logo 不在任何开源许可范围内（见
 [商标政策](./TRADEMARKS.md)），第三方图书内容不在任何许可范围内。

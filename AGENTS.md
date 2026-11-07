@@ -21,9 +21,10 @@
 
 1. **No unshipped claims.** The product is documentation-first; the profile says
    so plainly. A feature may be described as a design goal, never as shipped.
-2. **Roster accuracy.** The repository table matches `workspace.toml` and the
-   real visibility on GitHub. Update it in the same change that adds, renames or
-   makes a repository private.
+2. **Public roster only.** The table lists open-source repositories, one per row,
+   and nothing else: a private repository is never named, linked or hinted at on
+   this page. It mirrors the `visibility = "public"` entries in `../workspace.toml`;
+   update it in the same change that adds, renames or republishes a repository.
 3. **Licence accuracy.** The table stays consistent with
    `mixu-docs/docs/open-source-strategy.md`; a licence change updates both.
 4. **Trademark policy is not marketing.** It states what is permitted and what
