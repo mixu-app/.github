@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/mixu-app/.github/blob/main/TRADEMARKS.md
+    about: Do not open a public issue. Use the repository's Security tab > Report a vulnerability.

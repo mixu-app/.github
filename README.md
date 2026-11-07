@@ -8,6 +8,21 @@ Organization profile repository for [mixu-app](https://github.com/mixu-app).
 - Repository visibility and ownership rules live in the workspace `AGENTS.md`
   and `workspace.toml`, not here.
 
+## Contents
+
+| Path | Purpose |
+|---|---|
+| `profile/README.md` | Organization landing page (Chinese) |
+| `TRADEMARKS.md` | Brand and fork naming policy |
+| `workflow-templates/` | Starter workflows offered to every repository in the org |
+| `ISSUE_TEMPLATE/` | Bug and feature templates, with the no-content / no-secrets confirmations |
+| `PULL_REQUEST_TEMPLATE.md` | PR metadata line required by the workspace rules |
+| `dependabot.yml` | Weekly action and npm updates for this repository |
+| `CODEOWNERS` | Default owner for org-wide files |
+
+Starter workflows assume the shared `.markdownlint-cli2.jsonc` and, for the bun
+template, a `package.json` with `typecheck` / `test` / `build` scripts.
+
 ## Editing the profile
 
 - Keep it short: what the project is, what is open, what is not, where to start.

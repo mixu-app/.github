@@ -1,0 +1,7 @@
+{
+  "name": "Mixu · Markdown quality",
+  "description": "markdownlint-cli2 gate using the shared configuration (MD060 disabled, .carryctx ignored).",
+  "iconName": "book",
+  "categories": ["Documentation", "Continuous integration"],
+  "filePatterns": ["**/*.md", ".markdownlint-cli2.jsonc"]
+}

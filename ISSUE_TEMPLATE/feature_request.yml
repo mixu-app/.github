@@ -1,0 +1,38 @@
+name: Feature or requirement change
+description: Propose behaviour, a requirement change, or a design decision
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What does a reader or contributor lose today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change, and which requirement ID (`REA-*`, `GRF-*`, `AI-*`, `UX-*`) or ADR/OQ does it touch?
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: ["P0 — offline prototype", "P1 — connected beta", "P2 — later", "Unsure"]
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: This does not ask for DRM circumvention, book downloads, or unlicensed content.
+          required: true
+        - label: I understand a proposal is not a shipped feature.
+          required: true

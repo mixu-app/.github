@@ -1,0 +1,28 @@
+# Starter workflow: Markdown gate for any mixu-app repository.
+# Copy via the Actions tab ("New workflow") or add it manually. Adjust the globs
+# only if the repository does not use the shared .markdownlint-cli2.jsonc.
+name: Markdown quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  markdown:
+    name: Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v25
+        with:
+          globs: '**/*.md'

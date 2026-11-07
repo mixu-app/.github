@@ -1,0 +1,7 @@
+{
+  "name": "Mixu · Bun quality",
+  "description": "bun install + typecheck + test + build, with no extra bundler or lint packages.",
+  "iconName": "package",
+  "categories": ["JavaScript", "TypeScript", "Continuous integration"],
+  "filePatterns": ["package.json", "bunfig.toml"]
+}

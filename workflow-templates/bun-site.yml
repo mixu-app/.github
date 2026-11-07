@@ -1,0 +1,30 @@
+# Starter workflow: bun-only site/app gate (no bundler, no separate linters).
+# Prerequisite: package.json with `typecheck`, `test` and `build` scripts.
+name: Bun quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  bun:
+    name: Bun (typecheck, test, build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install
+      - run: bun run typecheck
+      - run: bun test
+      - run: bun run build

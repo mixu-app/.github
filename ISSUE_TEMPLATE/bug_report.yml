@@ -1,0 +1,61 @@
+name: Bug report
+description: Something behaves incorrectly in a shipped or specified capability
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste book text, EPUB files, personal notes, credentials or
+        presigned URLs. Security issues go through the repository's Security tab,
+        never a public issue.
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      placeholder: mixu-client / mixu-graph / mixu-spoiler / mixu-renderer / ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Steps, or a synthetic fixture. Never a copyrighted book.
+    validations:
+      required: true
+  - type: dropdown
+    id: spoiler
+    attributes:
+      label: Does this leak information past the reading horizon?
+      options:
+        - "No"
+        - "Not sure"
+        - "Yes — treat as stop-ship"
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have removed credentials, book text and personal data from this report.
+          required: true
+        - label: I am not reporting a security vulnerability here.
+          required: true

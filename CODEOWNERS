@@ -1,0 +1,3 @@
+# Default owner for organization-wide files. Per-repository CODEOWNERS files are
+# authoritative inside their own repository.
+* @Xuepoo

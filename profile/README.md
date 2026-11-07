@@ -25,7 +25,8 @@
 | [mixu-spoiler](https://github.com/mixu-app/mixu-spoiler) | 知识边界过滤（防剧透） | Apache-2.0 |
 | [mixu-renderer](https://github.com/mixu-app/mixu-renderer) | Compose Canvas 图谱渲染 | Apache-2.0 |
 | [mixu-contracts](https://github.com/mixu-app/mixu-contracts) | 叙事图格式、HTTP 契约、错误码 | Apache-2.0 |
-| [mixu-docs](https://github.com/mixu-app/mixu-docs) | 产品、架构、安全、决策文档 | CC-BY-4.0 |
+| `mixu-docs` | 产品、架构、安全、决策文档（**私有**，暂不公开） | 内部 |
+| [mixu-website](https://github.com/mixu-app/mixu-website) | 落地页（bun-only 静态站 + 中文文案） | Apache-2.0 |
 | [mixu-fixtures](https://github.com/mixu-app/mixu-fixtures) | 版权干净的剧透回归语料 | CC0-1.0 |
 | mixu-server / mixu-ai-worker / mixu-infrastructure | 托管服务、抽取管线、基础设施 | 专有（闭源） |
 
@@ -36,7 +37,7 @@ Apache-2.0（别的项目可以直接复用，不必继承客户端的约束）�
 
 ## 从这里开始
 
-- 想了解产品：读 [产品简报](https://github.com/mixu-app/mixu-docs/blob/main/docs/product/product-brief.md)。
+- 想了解产品：读 `mixu-docs`（内部私有仓库）。
 - 想参与客户端：读 [mixu-client](https://github.com/mixu-app/mixu-client) 的 `AGENTS.md` 与
   [贡献指南](https://github.com/mixu-app/mixu-client/blob/main/CONTRIBUTING.md)。
 - 关心剧透问题怎么测：看 [mixu-fixtures](https://github.com/mixu-app/mixu-fixtures)。
@@ -49,6 +50,6 @@ Apache-2.0（别的项目可以直接复用，不必继承客户端的约束）�
 
 ## 许可
 
-各仓库许可见上表，选型理由见 [开源策略](https://github.com/mixu-app/mixu-docs/blob/main/docs/open-source-strategy.md)。
+各仓库许可见上表，选型理由见 `mixu-docs`（内部私有仓库）。
 「Mixu」「谜序」名称与 Logo 不在任何开源许可范围内（见
 [商标政策](./TRADEMARKS.md)），第三方图书内容不在任何许可范围内。
