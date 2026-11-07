@@ -1,5 +1,6 @@
-<!-- The metadata line must stay first: issue/PR hygiene depends on it, so the
-     leading HTML comment satisfies markdownlint MD041 without moving it. -->
+<!-- markdownlint-disable-file MD041 -->
+<!-- The metadata line must stay first: PR hygiene depends on it, and a template
+     body is not a document with an H1. -->
 Priority: ... | Area: ... | Labels: ... | Milestone: ... | Task: CTX-XXXX
 
 ## What changed
