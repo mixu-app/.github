@@ -1,0 +1,7 @@
+# .github: workspace identity descriptor (mirrors workspace.toml).
+[repo]
+name = ".github"
+kind = "profile"
+lang = "md"
+role = "organization profile repository"
+visibility = "public"
