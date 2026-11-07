@@ -21,12 +21,12 @@
 
 1. **No unshipped claims.** The product is documentation-first; the profile says
    so plainly. A feature may be described as a design goal, never as shipped.
-2. **Public roster only.** The table lists open-source repositories, one per row,
-   and nothing else: a private repository is never named, linked or hinted at on
-   this page. It mirrors the `visibility = "public"` entries in `../workspace.toml`;
-   update it in the same change that adds, renames or republishes a repository.
-3. **Licence accuracy.** The table stays consistent with
-   `mixu-docs/docs/open-source-strategy.md`; a licence change updates both.
+2. **Entry point only.** The page links exactly one repository, `mixu`; a reader
+   must never need a second address, and a private repository is never named,
+   linked or hinted at. Component repositories appear only in the entry README.
+   Update this page in the same change that republishes or renames the entry repo.
+3. **Licence accuracy.** The repository table in the entry README stays consistent
+   with `mixu-docs/docs/open-source-strategy.md`; a licence change updates both.
 4. **Trademark policy is not marketing.** It states what is permitted and what
    needs permission; do not weaken it to make a fork "feel welcome".
 5. **No private detail.** No account ids, no unreleased commercial terms, no live
