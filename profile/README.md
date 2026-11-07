@@ -18,28 +18,27 @@
 
 ## 开源仓库
 
-| 仓库 | 内容 | 许可 |
-|---|---|---|
-| [mixu-client](https://github.com/mixu-app/mixu-client) | Android/KMP 客户端：阅读器与案情板 | MPL-2.0 |
-| [mixu-graph](https://github.com/mixu-app/mixu-graph) | 时序叙事图：模型、投影、查询 | Apache-2.0 |
-| [mixu-spoiler](https://github.com/mixu-app/mixu-spoiler) | 知识边界过滤（防剧透） | Apache-2.0 |
-| [mixu-renderer](https://github.com/mixu-app/mixu-renderer) | Compose Canvas 图谱渲染 | Apache-2.0 |
-| [mixu-contracts](https://github.com/mixu-app/mixu-contracts) | 叙事图格式、HTTP 契约、错误码 | Apache-2.0 |
-| [mixu-website](https://github.com/mixu-app/mixu-website) | 落地页（bun-only 静态站 + 中文文案） | Apache-2.0 |
-| [mixu-fixtures](https://github.com/mixu-app/mixu-fixtures) | 版权干净的剧透回归语料 | CC0-1.0 |
+只有一个入口：[**mixu**](https://github.com/mixu-app/mixu)。
 
-客户端与核心库开源，是为了让"不做剧透"这件事可以被外部检查。客户端用 MPL-2.0（改了的
-文件要公开，仍可商业分发），核心库用 Apache-2.0（别的项目可以直接复用，不必继承客户端的
-约束）。开源的是代码，不是云服务、品牌或第三方图书内容。
+```sh
+git clone --recurse-submodules https://github.com/mixu-app/mixu.git
+```
+
+客户端、图模型、防剧透过滤、图谱渲染、契约、回归语料与落地页都在这个仓库里，以 submodule
+按固定提交挂载。想单独复用某个组件（比如图模型），也可以直接用它自己的仓库——但通常你只需
+要知道一个地址。
+
+客户端用 MPL-2.0（改了的文件要公开，仍可商业分发），核心库用 Apache-2.0（别的项目可以直接
+复用，不必继承客户端的约束）。开源的是代码，不是云服务、品牌或第三方图书内容。
 
 ## 从这里开始
 
-- 想参与客户端：读 [mixu-client](https://github.com/mixu-app/mixu-client) 的 `AGENTS.md` 与
-  [贡献指南](https://github.com/mixu-app/mixu-client/blob/main/CONTRIBUTING.md)。
-- 想复用图模型或防剧透过滤：从 [mixu-graph](https://github.com/mixu-app/mixu-graph) 与
-  [mixu-spoiler](https://github.com/mixu-app/mixu-spoiler) 的 `docs/design.md` 开始。
-- 想验证数据格式：看 [mixu-contracts](https://github.com/mixu-app/mixu-contracts)。
-- 关心剧透问题怎么测：看 [mixu-fixtures](https://github.com/mixu-app/mixu-fixtures)。
+- 想读代码：`git clone --recurse-submodules` 之后看 `client/`、`graph/`、`spoiler/`、
+  `renderer/`、`contracts/`、`fixtures/`、`website/`。
+- 想参与客户端：读 `client/AGENTS.md` 与 `client/CONTRIBUTING.md`（在入口仓库里就能看到）。
+- 想复用图模型或防剧透过滤：从 `graph/docs/design.md`、`spoiler/docs/design.md` 开始，
+  也可以在它们各自的仓库里单独依赖。
+- 关心剧透问题怎么测：看 `fixtures/`。
 
 ## 联系方式
 
@@ -49,6 +48,6 @@
 
 ## 许可
 
-各仓库许可见上表；开源范围与许可选型的决定记录在维护者内部文档中。
+入口仓库脚手架 Apache-2.0，各组件保持自己的许可（见 `NOTICE`）；选型理由记录在维护者内部文档中。
 「Mixu」「谜序」名称与 Logo 不在任何开源许可范围内（见
 [商标政策](./TRADEMARKS.md)），第三方图书内容不在任何许可范围内。
