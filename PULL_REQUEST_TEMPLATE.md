@@ -1,3 +1,5 @@
+<!-- The metadata line must stay first: issue/PR hygiene depends on it, so the
+     leading HTML comment satisfies markdownlint MD041 without moving it. -->
 Priority: ... | Area: ... | Labels: ... | Milestone: ... | Task: CTX-XXXX
 
 ## What changed
