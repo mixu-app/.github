@@ -1,0 +1,45 @@
+# Starter workflow: Kotlin Multiplatform & Compose Multiplatform quality gate.
+# Runs markdownlint-cli2, submodule pin verification, and Gradle check under JDK 25 LTS.
+name: KMP & Compose quality gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Markdown, Pins & Gradle Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Verify submodule pins
+        run: ./script/check-pins.sh
+
+      - name: markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v25
+        with:
+          globs: "**/*.md"
+
+      - name: Set up JDK 25 LTS
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Run Gradle check
+        run: ./gradlew --no-daemon check

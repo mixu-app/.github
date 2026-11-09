@@ -1,0 +1,7 @@
+{
+  "name": "Mixu · KMP & Compose Multiplatform quality",
+  "description": "Markdownlint, submodule pin verification, and Gradle check under JDK 25 LTS for KMP and Compose Multiplatform repositories.",
+  "iconName": "kotlin",
+  "categories": ["Kotlin", "Continuous integration"],
+  "filePatterns": ["settings.gradle.kts", "build.gradle.kts"]
+}
