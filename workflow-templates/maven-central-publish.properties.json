@@ -1,0 +1,7 @@
+{
+  "name": "Mixu · Publish to Maven Central",
+  "description": "Verify, GPG-sign, and publish Apache-2.0 KMP multiplatform artifacts to Sonatype Maven Central Portal.",
+  "iconName": "package",
+  "categories": ["Deployment", "Kotlin"],
+  "filePatterns": ["build.gradle.kts", "gradle.properties"]
+}
